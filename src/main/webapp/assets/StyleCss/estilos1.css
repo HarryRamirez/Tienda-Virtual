@@ -13,3 +13,12 @@ and open the template in the editor.
     padding: 0;
     box-sizing: border-box;
 }
+
+.header{
+    color: brown;
+    text-orientation: upright;
+    padding: 5px;
+}
+arriba_izquierda{
+    padding: 9px;
+}
