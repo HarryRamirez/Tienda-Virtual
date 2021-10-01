@@ -11,14 +11,152 @@ and open the template in the editor.
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family:sans-serif
+}
+.logo{
+    width: 50px;
+     
+}
+.nombre{
+    font-size: 30px;
+    margin-left: 60px;
+    margin-top: -40px;
+    line-height: 35px;
+    
 }
 
-.header{
-    color: brown;
-    text-orientation: upright;
-    padding: 5px;
+
+   
+.arriba_izquierda{
+   border-color: #d3d3d4;
+   border-width: 1px;
+   border-style: inset;
+       
 }
-arriba_izquierda{
-    padding: 9px;
-}
+
+aside.left-panel {
+  background: #fff;
+  height: 100vh;
+  padding: 0;
+  vertical-align: top;
+  width: 280px;
+  -webkit-box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 55px;
+  z-index: 999; }
+  aside.left-panel:hover {
+    overflow-x: scroll; }
+
+.small-device .right-panel {
+  margin-left: 83px; }
+
+.navbar {
+  background: #fff;
+  border-radius: 0;
+  border: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: top; }
+  .navbar .main-menu {
+    float: left;
+    padding: 0;
+    padding-bottom: 50px; }
+  .navbar .menu-title {
+    color: #41434d;
+    clear: both;
+    display: block;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 50px;
+    padding: 0;
+    text-transform: uppercase;
+    width: 100%; }
+   .navbar .navbar-nav {
+    float: none;
+    position: relative; }
+    .navbar .navbar-nav > li {
+      padding-left: 30px;
+      padding-right: 30px; }
+      .navbar .navbar-nav > li.active {
+        background: #fafafa; }
+    .navbar .navbar-nav li {
+      width: 100%; }
+      .navbar .navbar-nav li.active .menu-icon, .navbar .navbar-nav li:hover .toggle_nav_button:before,
+      .navbar .navbar-nav li .toggle_nav_button.nav-open:before {
+        color: #03a9f3; }
+      .navbar .navbar-nav li .dropdown-toggle:after {
+        display: none; }
+      .navbar .navbar-nav li > a {
+        background: none !important;
+        color: #607d8b;
+        display: inline-block;
+        font-size: 14px;
+        line-height: 26px;
+        padding: 10px 0;
+        position: relative;
+        width: 100%; }
+        .navbar .navbar-nav li > a:hover, .navbar .navbar-nav li > a:hover .menu-icon {
+          color: #03a9f3; }
+        .navbar .navbar-nav li > a .menu-icon {
+          color: #607d8b;
+          float: left;
+          margin-top: 8px;
+          width: 55px;
+          text-align: left;
+          z-index: 9; }
+        .navbar .navbar-nav li > a .menu-title-text {
+          font-size: 14px; }
+        .navbar .navbar-nav li > a .badge {
+          border-radius: 0;
+          font-weight: 600;
+          float: right;
+          margin: 6px 0 0 0;
+          padding: 0.4em 0.5em; }
+      .navbar .navbar-nav li.menu-item-has-children {
+        position: relative; }
+        .navbar .navbar-nav li.menu-item-has-children a {
+          line-height: 30px; }
+          .navbar .navbar-nav li.menu-item-has-children a:before {
+            content: "";
+            position: absolute;
+            top: 23px;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #607d8b #607d8b transparent transparent;
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+            -webkit-transition: all .25s ease;
+            transition: all .25s ease; }
+          .navbar .navbar-nav li.menu-item-has-children a:hover:before {
+            border-color: #03a9f3 #03a9f3 transparent transparent; }
+        .navbar .navbar-nav li.menu-item-has-children .sub-menu {
+          background: #fff;
+          border: none;
+          -webkit-box-shadow: none;
+                  box-shadow: none;
+          overflow-y: hidden;
+          padding: 0 0 0 35px; }
+          .navbar .navbar-nav li.menu-item-has-children .sub-menu li {
+            position: relative; }
+          .navbar .navbar-nav li.menu-item-has-children .sub-menu i {
+            color: #c8c9ce;
+            float: left;
+            padding: 0;
+            position: absolute;
+            left: 0;
+            font-size: 14px;
+            top: 9px; }
+          .navbar .navbar-nav li.menu-item-has-children .sub-menu a {
+            padding: 2px 0 2px 30px; }
+            .navbar .navbar-nav li.menu-item-has-children .sub-menu a:before {
+              content: '';
+              display: none; }
+            
