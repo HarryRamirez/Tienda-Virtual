@@ -5,13 +5,15 @@
  */
 package Modelos;
 
+import java.sql.PreparedStatement;
+
 /**
  *
  * @author kenny
  */
 public class Proveedor {
    int idProveedor;
-   String nombre;
+   String nombres;
    String  nit;
 
     public Proveedor() {
@@ -25,12 +27,12 @@ public class Proveedor {
         this.idProveedor = idProveedor;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombres() {
+        return nombres;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
     }
 
     public String getNit() {
@@ -41,7 +43,20 @@ public class Proveedor {
         this.nit = nit;
     }
    public void crearProveedor(){
-   
+       Conexion objConector = new Conexion();
+       objConector.conectar();
+       try {
+           String sql= "INSERT INTO Proveedor"
+                   +"(idProveedor, nombres, nit)"
+                   +"VALUES(?,?,?);";
+           PreparedStatement stmt;
+           stmt = objConector.conn.prepareStatement(sql);
+           stmt.setString(1,String.valueOf(this.idProveedor));
+           stmt.setString(2,this.nombres);
+           stmt.setString(3,this.nit);
+                   
+       } catch (Exception e) {
+       }
    }
    public void consultarProveedor(){
    

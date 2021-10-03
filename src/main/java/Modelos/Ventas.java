@@ -9,23 +9,32 @@ package Modelos;
  *
  * @author kenny
  */
-public class Compras {
-    int idCompras;
+public class Ventas {
+    int idVentas;
+    int idCliente;
     int idEmpleado;
     String numeroSerie;
-    String fechaCompra;
+    String fechaVentas;
     double monto;
     String estado;
 
-    public Compras() {
+    public Ventas() {
     }
 
-    public int getIdCompras() {
-        return idCompras;
+    public int getIdVentas() {
+        return idVentas;
     }
 
-    public void setIdCompras(int idCompras) {
-        this.idCompras = idCompras;
+    public void setIdVentas(int idVentas) {
+        this.idVentas = idVentas;
+    }
+
+    public int getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
 
     public int getIdEmpleado() {
@@ -44,12 +53,12 @@ public class Compras {
         this.numeroSerie = numeroSerie;
     }
 
-    public String getFechaCompra() {
-        return fechaCompra;
+    public String getFechaVentas() {
+        return fechaVentas;
     }
 
-    public void setFechaCompra(String fechaCompra) {
-        this.fechaCompra = fechaCompra;
+    public void setFechaVentas(String fechaVentas) {
+        this.fechaVentas = fechaVentas;
     }
 
     public double getMonto() {
@@ -67,21 +76,5 @@ public class Compras {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-    
-     public void crearCompras(){
-   
-   }
-   public void consultarCompras(){
-   
-   }
-   public void listarCompras(){
-   
-   }
-   public void actualizarCompras(){
-   
-   }
-   public void eliminarCompras(){
-   
-   }
     
 }
