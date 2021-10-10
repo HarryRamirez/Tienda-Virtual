@@ -6,6 +6,7 @@
 package Modelos;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  *
@@ -43,8 +44,10 @@ public class Proveedor {
         this.nit = nit;
     }
    public void crearProveedor(){
+       System.out.println("Crear proveedor");
        Conexion objConector = new Conexion();
        objConector.conectar();
+       
        try {
            String sql= "INSERT INTO Proveedor"
                    +"(idProveedor, nombres, nit)"
@@ -54,15 +57,45 @@ public class Proveedor {
            stmt.setString(1,String.valueOf(this.idProveedor));
            stmt.setString(2,this.nombres);
            stmt.setString(3,this.nit);
+           stmt.execute();
+           objConector.desconectar();
                    
        } catch (Exception e) {
+           System.out.println("error al insertar: "+ e);
        }
    }
-   public void consultarProveedor(){
-   
+   public ResultSet consultarProveedor(){
+        Conexion objConector = new Conexion();
+       objConector.conectar();
+       
+       try {
+          String sql="SELECT * FROM Proveedor";
+          PreparedStatement stmt;
+          stmt= objConector.conn.prepareStatement(sql);
+          ResultSet consulta= stmt.executeQuery();
+          objConector.desconectar();
+           System.out.println(consulta);
+          return consulta;
+       } catch (Exception e) {
+           System.out.println("Error modelo: "+e);
+       }
+       return null;
    }
-   public void listarProveedor(){
-   
+   public ResultSet listarProveedor(){
+       Conexion objConector = new Conexion();
+       objConector.conectar();
+       try {
+          String sql="SELECT * FROM Proveedor WHERE idProveedor= ?";
+          PreparedStatement stmt;
+          stmt= objConector.conn.prepareStatement(sql);
+          stmt.setInt(1, this.idProveedor);
+          ResultSet consulta= stmt.executeQuery();
+          objConector.desconectar();
+          return consulta;
+       } catch (Exception e) {
+           System.out.println("Error modelo: "+e);
+       }
+       return null;
    }
    public void actualizarProveedor(){
    
